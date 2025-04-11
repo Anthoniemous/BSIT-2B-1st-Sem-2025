@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NBA Atlantic Teams</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      height: 100vh;
+      background-color: #1d3557;
+      color: #fff;
+      padding: 30px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+      margin-bottom: 30px;
+      font-size: 1.5em;
+      text-align: center;
+    }
+
+    .nav-link {
+      color: #f1f1f1;
+      text-decoration: none;
+      font-size: 1em;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .nav-link:hover {
+      background-color: #457b9d;
+    }
+
+    /* Main content */
+    .main-content {
+      margin-left: 240px; /* leave space for sidebar */
+      width: calc(100% - 240px);
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .team-card {
+      background: #e8edf5;
+      padding: 20px;
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .team-logo-container {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .team-logo-container img {
+      max-width: 80%;
+      max-height: 80%;
+      object-fit: contain;
+    }
+
+    .team-name {
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #222;
+      margin-top: 10px;
+    }
+    
+    .team-link {
+      font-size: 0.9em;
+      color: #1d4ed8;
+      text-decoration: none;
+      margin-top: 8px;
+    }
+
+    .team-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>NBA Zone</h2>
+    <a href="#" class="nav-link">Home</a>
+    <a href="#" class="nav-link">Teams</a>
+    <a href="#" class="nav-link">Schedule</a>
+    <a href="#" class="nav-link">About</a>
+  </div>
+
+  <!-- Main content -->
+  <div class="main-content">
+    <div class="container">
+      <h1>NBA Atlantic Division Teams</h1>
+      <div class="team-grid" id="teamGrid">
+        <!-- Team cards will be injected here -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var settings = {
+      "url": "https://nba-api-free-data.p.rapidapi.com/nba-atlantic-team-list",
+      "method": "GET",
+      "timeout": 0,
+      "headers": {
+        "x-rapidapi-key": "76c46dd4famsh2352d9fd6d65fe1p131ef2jsn3e821a753419"
+      },
+    };
+
+    $.ajax(settings).done(function (response) {
+      if (response.status === "success") {
+        const teams = response.response.teamList;
+        const grid = $('#teamGrid');
+
+        teams.forEach(team => {
+          const card = `
+            <div class="team-card">
+              <div class="team-logo-container">
+                <img src="${team.logo}" alt="${team.name} logo">
+              </div>
+              <div class="team-name">${team.name}</div>
+              <a href="${team.href}" target="_blank" class="team-link">View on ESPN</a>
+            </div>
+          `;
+          grid.append(card);
+        });
+      } else {
+        $('#teamGrid').html('<p>Failed to load team data.</p>');
+      }
+    });
+  </script>
+
+</body>
+</html>
+
