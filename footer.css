@@ -1,0 +1,32 @@
+footer{
+    position: relative;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 100px;
+    padding: 10px;
+    z-index: 1;
+}
+footer p{
+    text-align: center;
+    color: hsl(218, 81%, 85%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+footer a{
+    color: hsl(218, 81%, 85%) !important;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: unset!important;
+    background-color: unset !important;
+    transition: 0.1s !important;
+    text-align: center;
+}
+footer a:hover{
+    color: blue !important;
+}
+
+@media screen and (max-width: 768px){
+    footer{
+        font-size: 0.8em;
+        gap: 10px;
+    }
+}
