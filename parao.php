@@ -32,8 +32,8 @@
 </head>
 <body>
         <?php
-        echo "<div class='echo-style'>Hi I'm Ron Imran G. Parao.</div>";
-        print("<div class='print-style'>Hi Ron! How are you?.</div>");
+        echo "<div class='echo-style'>Hi I'm Ron Imran G. Parao (This is echo).</div>";
+        print("<div class='print-style'>Hi Ron! How are you? (This is echo).</div>");
         ?>
 </body>
 </html>
