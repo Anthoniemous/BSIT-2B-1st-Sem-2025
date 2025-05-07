@@ -33,7 +33,7 @@
         echo "This is an echo<br>","this is also an echo but in a single line of echo but multiple arguments<br>","using \"()\" is optional only<br>","Style for echo<br><div class=\"custom-echo\">My Custom Echo</div>";
         print "This is print<br>";
         print "This is also a print but in different line of print<br>";
-        print "using \"()\" is optional only";
+        print "using \"()\" is optional only<br>";
         print "Style for print<br><div class=\"custom-print\">My Custom Print</div>"
     ?>
 </body>
