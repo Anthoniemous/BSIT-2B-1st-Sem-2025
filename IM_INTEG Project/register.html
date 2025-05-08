@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="main-container">
+        <div class="container-register">
+            <h1>Register</h1>
+            <form action="/login" method="POST" class="form-container">
+                <div class="form-row">
+                    <input type="text" name="firstname" placeholder="Firtst Name" required>
+                    <input type="email" name="primaryemail" placeholder="Primary Email" required>
+                    
+                </div>
+                <div class="form-row">
+                    <input type="text" name="lastname" placeholder="Last Name" required>
+                    <input type="email" name="secondaryemail" placeholder="Secondary Email" required>
+                </div>
+                
+               <div class="form-row">
+                <label for="birthdate">
+                    Birthday
+                    <input type="date" name="birthdate" placeholder="Birth Date" required>
+                </label>
+                    <input type="text" name="street" placeholder="Street" required>
+               </div>
+               <div class="form-row"> 
+                    <input type="text" name="username" placeholder="Username" required>
+                <select name="select" id="select">
+                    <option value="manicipality">Banaybanay</option>
+                    <option value="manicipality">Lupon</option>
+                    <option value="manicipality">Pantukan</option>
+                </select>
+               </div>
+                <div class="form-row">
+                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="number" name="zipcode" placeholder="ZipCode" required>
+                </div>
+                <button type="submit" id="loginButton">Sign up</button>
+                <p>If you have an account already, please <a href="login.html">Login</a></p>
+            </form>
+        </div> 
+    </main>
+</body>
+</html>
