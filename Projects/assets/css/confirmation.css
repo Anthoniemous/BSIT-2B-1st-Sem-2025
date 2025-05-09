@@ -1,0 +1,153 @@
+/*General*/
+body, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: radial-gradient(790px circle at 0% 0%,
+    hsl(218, 41%, 35%) 15%,
+    hsl(218, 41%, 30%) 35%,
+    hsl(218, 41%, 20%) 75%,
+    hsl(218, 41%, 19%) 80%,
+    transparent 100%),
+  radial-gradient(1270px circle at 100% 100%,
+    hsl(218, 41%, 45%) 15%,
+    hsl(218, 41%, 30%) 35%,
+    hsl(218, 41%, 20%) 75%,
+    hsl(218, 41%, 19%) 80%,
+    transparent 100%);
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Anchor tag*/
+.email-confirmation-container a, .email-confirmation-container i{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: rgb(37, 37, 37);
+    padding: 10px;
+}
+.email-confirmation-container a{
+    border-radius: 50px;
+}
+.email-confirmation-container i{
+    padding: 5px;
+    background-color: hsl(218, 82%, 59%);
+    border-radius: 50%;
+}
+
+/*Main*/
+.email-confirmation-container{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    margin: 20px;
+}
+
+.prompt-container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prompt-container1 img{
+    width: 150px;
+}
+.prompt-container1 h3{
+    font-size: 1.8rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.prompt-container2{
+    text-align: center;
+}
+.prompt-container2 h1{
+    margin-top: 5px;
+    padding: 0;
+    font-size: xx-large;
+}
+.prompt-container2 p{
+    justify-self: center;
+    width: 50%;
+}
+
+.confirm-form{
+    display: flex;
+    justify-self: center;
+    padding: 20px 40px;
+    width: 30%;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+    background-color: rgb(37, 37, 37);
+}
+.confirm-form-container{
+    width: 100%;
+}
+.form-outline .form-control{
+    display: flex;
+    justify-self: center;
+    width: 100%;
+    padding: 10px;
+    color: whitesmoke;
+    font-size: 0.9em;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: rgba(37, 37, 37, 0.8);
+    box-shadow: inset 1px 1px 2px rgba(255,255,255,0.3), 1px 1px 2px rgba(255,255,255,0.5);
+    transition: 1s;
+}
+.form-outline .form-control:hover{
+    box-shadow: 1px 1px 2px 3px rgba(47, 47, 250, 0.733), -1px -1px 2px 3px rgba(47, 47, 250, 0.733);
+}
+.form-outline p{
+    margin-top: 0;
+    color: rgb(245, 57, 57);
+    font-size: 0.7rem;
+    font-style: italic;
+    padding: 10px;
+    letter-spacing: 1;
+}
+.confirm-form-container hr{
+    border: none;
+    height: 1px;
+    background-color: rgba(128, 128, 128, 0.658);
+    margin-bottom: 20px;
+}
+ .btn{
+    display: flex;
+    justify-self: center;
+    color: rgb(37, 37, 37);
+    font-size: 0.9em;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(218, 82%, 59%);
+    cursor: pointer;
+}
+.query-section h3{
+    display: flex;
+    justify-self: center;
+    margin-bottom: 0px;
+}
+.query-section p{
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 768px){
+    body, html{
+        margin: 10px;
+    }
+    .confirm-form{
+        width: 60%;
+    }
+    .prompt-container2 p{
+        width: 90%;
+    }
+}

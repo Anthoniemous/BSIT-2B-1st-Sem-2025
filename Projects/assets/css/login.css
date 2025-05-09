@@ -1,0 +1,83 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.main-container{
+    position: relative;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: rgb(37, 37, 37);
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+}
+
+h2{
+    text-align: center;
+    color: white;
+    padding: 0 5px 5px 5px;
+}
+
+.form-control{
+    color: whitesmoke;
+    background-color: rgb(37, 37, 37);
+    width: 500px;
+    box-shadow: inset 1px 1px 2px rgba(255,255,255,0.3), 1px 1px 2px rgba(255,255,255,0.5);
+}
+
+.forgotPrompt{
+    text-align: center;
+}
+
+hr{
+    color: white;
+}
+
+.btn-signup{
+    display: flex;
+    justify-self: center;
+    background-color: hsl(218, 82%, 59%);
+}
+
+.text-center p, .forgotPrompt{
+    color: white;
+}
+
+.text-center a{
+    color: grey;
+    transition: 0.2s;
+}
+
+.text-center a:hover{
+    color: white;
+}
+
+.text-center.register{
+    margin-top: 10px;
+}
+
+.text-center.register .register{
+    color: hsl(218, 82%, 59%);
+    text-decoration: underline;
+}
+
+.text-center.register .register:hover{
+    color: hsl(218, 56%, 44%);
+}
+
+@media screen and (max-width: 1080px) {
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-control{
+        width: 300px;
+        height: 30px;
+   }
+}
