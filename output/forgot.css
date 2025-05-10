@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Layout */
+main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #d6d6d6;
+    font-size: 1.5rem;
+}
+
+/* Typography */
+p {
+    font-size: 2rem;
+}
+
+.normal-text {
+    font-size: 1rem;
+}
+
+/* Form Container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 0;
+    background-color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    width: auto;
+    height: auto;
+    z-index: 0;
+}
+
+/* Input Fields */
+input {
+    outline: none;
+    border: 0.1px solid rgb(161, 161, 161);
+    border-radius: 5px;
+    padding: 5px;
+    width: 500px;
+    height: 30px;
+}
+
+/* Input Container */
+.inputs {
+    display: flex;
+    width: 70%;
+    height: 25%;
+}
+
+/* Buttons */
+button {
+    width: 500px;
+    padding: 15px 30px;
+    background-color: #1c56d3;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    cursor: pointer;
+    transition: box-shadow 0.3s linear, background-color 0.3s linear;
+}
+
+button:hover {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+    background-color: #10378A;
+}
+
+/* Specific Button Styles */
+#login {
+    font-size: 1.2rem;
+}
+
+/* Utility Sections */
+.signup {
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.save-account,
+.sign-up {
+    width: auto;
+    height: auto;
+}
+
+.save-account,
+.save,
+.remember {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.remember {
+    width: 120px;
+}
+
+.sign-up,
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-box {
+    width: 25px;
+}
+
+.beerday {
+    cursor: text;
+}
+
+/* Loading Overlay */
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.loading-container {
+    width: 100px;
+    height: 100px;
+    border: 20px solid #DCE2DC;
+    border-radius: 50%;
+    border-right-color: transparent;
+    animation: rotate 1.5s linear infinite;
+}
+
+/* Visibility Utility */
+.hidden {
+    display: none;
+    z-index: -1;
+}
+
+/* Animations */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        border-top-color: #DCE2DC;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    25% {
+        border-top-color: transparent;
+        border-right-color: #DCE2DC;
+    }
+    50% {
+        border-right-color: transparent;
+        border-bottom-color: #DCE2DC;
+    }
+    75% {
+        border-bottom-color: transparent;
+        border-left-color: #DCE2DC;
+    }
+    100% {
+        border-left-color: transparent;
+        border-top-color: #DCE2DC;
+        transform: rotate(360deg);
+    }
+}

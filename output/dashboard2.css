@@ -1,0 +1,152 @@
+.chart-container{
+    display: flex;
+    padding: 50px 0px;
+    justify-content: space-around;
+    width: 100%;
+}
+.text{
+    padding: 20px;
+    font-size: 2rem;
+}
+.box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 450px;
+    background-color: white;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 5px 8px 4px rgba(0,0,0,0.15);
+}
+.chart {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.chart canvas {
+    width: 300px;
+    height: 300px;
+}
+.box-content{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.color-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.color{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: white;
+    border-radius: 10px;
+}
+.color-container .color{
+    width: 120px;
+    height: 64px;
+}
+.color-top, .color-bottom{
+    display: flex;
+    gap: 10px;
+}
+.BSIT{
+    width: 100%;
+    background-color: #FF7F00;
+}
+.BSBA{
+    width: 100%;
+    background-color: #E40000;
+}
+.BTLED{
+    width: 100%;
+    background-color: #4D40FF;
+}
+.BSA{
+    width: 100%;
+    background-color: #1DAF00;
+}
+.teaching{
+    width: 100%;
+    background-color: #3498db;
+}
+.non-teaching{
+    width: 100%;
+    background-color: #95a5a6;
+}
+.color-container .color.teaching, .color-container .color.non-teaching{
+    width: 200px;
+    height: 60px;
+}
+.passed{
+    width: 100%;
+    background-color: #00C925;
+}
+.failed{
+    width: 100%;
+    background-color: #FF0000;
+}
+.color-container .color.passed, .color-container .color.failed{
+    width: 200px;
+    height: 60px;
+}
+.title{
+    font-size: 2rem;
+}
+.table-content{
+    width: 100%;
+}
+.table-container {
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 1rem;
+    overflow: hidden;
+  }
+  
+  .clean-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: #ffffff;
+  }
+  
+  .clean-table thead {
+    background-color: #637398;
+    color: #ffffff;
+  }
+  
+  .clean-table th,
+  .clean-table td {
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+  }
+  
+  .clean-table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+  
+  .clean-table tbody tr:hover {
+    background-color: #e9ecef;
+  }
+  
+  .clean-table th {
+    text-align: center;
+    font-weight: bold;
+  }
+  .clean-table th:nth-child(2),
+.clean-table td:nth-child(2) {
+  width: 750px; /* Set the width of the "Email" column */
+}
+.active{
+    text-align: center;
+    color: #1DAF00;
+}
+.inactive{
+    text-align: center;
+    color: #E40000;
+}
+  

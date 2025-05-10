@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #d6d6d6;
+}
+img{
+    width: 100px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 50%;
+}
+.back{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+.edit-button{
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+    text-underline-offset: 3px;
+}
+.profile-card{
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    height: 80%;
+    width: 70%;
+    border-radius: 10px;
+    background-color: white;
+}
+.person-name{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.name{
+    text-decoration: underline;
+    font-size: 1.3rem;
+}
+.profile-picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    padding: auto;
+    width: auto;
+    height: auto;
+}
+.profile-content{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+    border-left: .5px solid rgb(189, 189, 189);
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+}
+nav ul li, a{
+    padding: 10px 15px;
+    list-style: none;
+    text-align: center;
+    box-shadow: 0px 0px 1px rgb(0,0,0);
+    cursor: pointer;
+    transition: background-color 0.2s linear, color 0.2s linear;
+}
+.selected{
+    background-color: blue;
+    color: white;
+}
+.fullname-name{
+    display: flex;
+    gap: 10px;
+}
+nav ul li:hover, a:hover{
+    background-color: rgb(0, 0, 209);
+    color: white;
+}
+.fullname, .hobby{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+.details-name{
+    display: flex;
+    gap: 10px;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.hobby{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.bios{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: justify;
+}
+button, a{
+    border: none;
+    background-color: white;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    padding: 10px 15px;
+    box-shadow: 0px 0px 1px rgb(0,0,0);
+    cursor: pointer;
+    transition: background-color 0.2s linear, color 0.2s linear;
+}
+button:hover{
+    background-color: rgb(0, 0, 209);
+    color: white;
+}
+.selected:hover{
+    background-color: blue;
+}
+.loading-container{
+    width: 100px;
+    height: 100px;
+    border: 20px solid #DCE2DC;
+    border-radius: 50%;
+    position: relative;
+    margin: auto;
+    border-right-color: transparent;
+    animation: rotate 1.5s linear infinite;
+}
+
+.loading{
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+.hidden{
+    display: none;
+    z-index: -1;
+}
+@keyframes rotate{
+    0% {
+        transform: rotate(0deg);
+        border-top-color: #DCE2DC; 
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    25% {
+        border-top-color: transparent;
+        border-right-color: #DCE2DC; 
+    }
+    50% {
+        border-right-color: transparent;
+        border-bottom-color: #DCE2DC;
+    }
+    75% {
+        border-bottom-color: transparent;
+        border-left-color: #DCE2DC;
+    }
+    100% {
+        border-left-color: transparent;
+        border-top-color: #DCE2DC; 
+        transform: rotate(360deg);
+    }
+}
